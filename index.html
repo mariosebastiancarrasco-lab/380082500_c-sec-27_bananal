@@ -53,7 +53,7 @@
             <h3>📍 DATOS COMPLETOS</h3>
             <ul>
                 <li><strong>CUE:</strong> 380082500</li>
-                <li><strong>📍 Coordenadas:</strong> -23.56153, -64.50465</li>
+                <li><strong>📍 Coordenadas:</strong> -23.562386, -64.503537</li>
                 <li><strong>📞 Teléfono:</strong> 388-4914677</li>
                 <li><strong>✉️ Email:</strong> <a href="mailto:me380082500@gmail.com">me380082500@gmail.com</a></li>
                 <li><strong>📍 Dirección:</strong> VECINAL, 0</li>
@@ -65,7 +65,7 @@
                 <li><strong>Ⓢ Sector:</strong> Estatal</li>
                 <li><strong>⏰ Jornada:</strong> Simple</li>
                 <li><strong>📚 Modalidad - Nivel:</strong> Común - Secundaria</li>
-                <li><strong>⭕ Radio de influencia:</strong> 500m (círculo rojo)</li>
+                <li><strong>⭕ Radio de influencia:</strong> 120m (círculo rojo)</li>
             </ul>
            
             <h2>🛰️ Mapas Base</h2>
@@ -76,7 +76,7 @@
             </div>
            
             <h2>🎛️ Controles</h2>
-            <button onclick="map.setView([-23.56153,-64.50465], 17)">📍 Centrar Colegio</button>
+            <button onclick="map.setView([-23.562386,-64.503537], 17)">📍 Centrar Colegio</button>
             <button onclick="map.locate({setView: true, maxZoom: 17})">📱 Mi Ubicación</button>
              
 
@@ -110,7 +110,7 @@
         currentBaseLayer = baseMaps.osm;
        
         // Marcador escuela ✅
-        L.marker([-23.56153, -64.50465]).addTo(map).bindPopup(`
+        L.marker([-23.562386, -64.503537]).addTo(map).bindPopup(`
             <div style="text-align:center; min-width:280px; font-family:Arial;">
                 <h3 style="color:#2c3e50;">🏫 COLEGIO SECUNDARIO N 27</h3>
                 <p><strong>CUE:</strong> 380082500 | <strong>📞:</strong> 3886 - 498576</p>
@@ -124,8 +124,8 @@
         `);
 
         // Círculo 500m ✅
-        L.circle([-23.56153, -64.50465], {
-            color: '#3498db', fillColor: '#F52749', fillOpacity: 0.3, radius: 500
+        L.circle([-23.562386, -64.503537], {
+            color: '#3498db', fillColor: '#F52749', fillOpacity: 0.3, radius: 120
         }).addTo(map);
 
         // Geocodificador
@@ -145,7 +145,7 @@
             L.marker(e.latlng).addTo(map).bindPopup(
                 `✅ ¡Estás aquí!<br>
                 📍 ${e.latlng.lat.toFixed(6)}, ${e.latlng.lng.toFixed(6)}<br>
-                📏 ${Math.round(map.distance(e.latlng, [-23.56153, -64.50465]))} m del colegio`
+                📏 ${Math.round(map.distance(e.latlng, [-23.562386, -64.503537]))} m del colegio`
             ).openPopup();
         });
         map.on('locationerror', () => alert('❌ GPS bloqueado. Activa ubicación.'));
